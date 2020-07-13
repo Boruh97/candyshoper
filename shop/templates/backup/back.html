@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+ <head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="{% static "style.css" %}">
+ </head>
+ <body>
+ <div id="top_logo">
+     <div><p class="logo_in_top"><img src="{% static "images/top_logo_cut.png" %}" alt="корзина кондитера"></p></div>
+     <div> <div class="mixer"><img src="{% static "images/mixer.png" %}" width="840" height="240" alt=""></div></div>
+     <div><div class="adr"> г. Макарон <br> Улица Пушкина 54<br>+88005553535</div></div>
+ </div>
+
+     <header>
+      <div class="logo"> </div>
+      <ul class="header-menu">
+            <li>
+                <a href="#">Каталог</a>
+            </li>
+          <li>
+                <a href="">Рецепты</a>
+            </li>
+
+          <li>
+                <a href="">Новости</a>
+            </li>
+          <li>
+                <a href="">Контакты</a>
+            </li>
+          <li>
+              {% if user.is_authenticated %}
+              <a href="{% url 'personal_page' %}">Личный кабинет</a>
+              {% else %}
+              <a href="{% url 'login' %}">Личный кабинет</a>
+              {% endif %}
+          </li>
+          <li>
+                <a href="{% url 'cart_detail' %}">Корзина</a>
+              <img src="{% static "images/art.png" %}" width="30px" >
+            </li>
+          <div class="search">
+          <li>
+              <form action="{% url 'search' %}">
+                <input type="text" size="12px" name="search">
+                <input type="image" src="{% static "images/icon_search.png" %}" width="20" height="20">
+                  </form>
+
+          </li>
+              <li>
+                  {% if user.is_authenticated %}
+                <a href=""> {{ request.user }} </a>
+              <a href="{% url 'logout' %}"> выйти</a>
+
+             {% endif %}
+
+              </li>
+              </div>
+      </ul>
+    </header>
+
+         <div class="catalog">
+        <div class="dropdown">
+        <h1><a href="#">Упаковка</a></h1>
+                      <div class="dropdown-child">
+    <a href="{% url 'cakes' %}">Торты</a>
+    <a href="{% url 'cupcakes' %}">Капкейки</a>
+    <a href="#">Конфеты и шоколад</a>
+    <a href="#">Печенье, пряники </a>
+    <a href="#">Зефир и Macarons</a>
+    <a href="#">Креманки для трайфлов</a>
+    <a href="#">Пакетики для сладостей</a>
+    <a href="#">Ленты, бумажные наполнители</a>
+    <a href="#">Подложки</a>
+
+  </div>
+        </div>
+
+                <div class="dropdown">
+        <h1><a href="#">Пищевые красители</a></h1>
+                      <div class="dropdown-child">
+    <a href="#">Красители<br>Гелевые</a>
+    <a href="#">Водорастворимые</a>
+    <a href="#">Жирорастворимые</a>
+    <a href="#">Цветочная пыльца</a>
+    <a href="#">Кандурин</a>
+    <a href="#">Фломастеры<br>для рисования</a>
+
+  </div>
+        </div>
+
+        <div class="dropdown">
+        <h1><a href="#">Инструменты и формы</a></h1>
+                      <div class="dropdown-child">
+    <a href="#">Красители<br>Гелевые</a>
+    <a href="#">Водорастворимые</a>
+    <a href="#">Жирорастворимые</a>
+    <a href="#">Цветочная пыльца</a>
+    <a href="#">Кандурин</a>
+    <a href="#">Фломастеры<br>для рисования</a>
+
+  </div>
+        </div>
+
+        <div class="dropdown">
+        <h1><a href="#">Бумажные формы и капсулы</a></h1>
+                      <div class="dropdown-child">
+    <a href="#">Красители<br>Гелевые</a>
+    <a href="#">Водорастворимые</a>
+    <a href="#">Жирорастворимые</a>
+    <a href="#">Цветочная пыльца</a>
+    <a href="#">Кандурин</a>
+    <a href="#">Фломастеры<br>для рисования</a>
+
+  </div>
+        </div>
+
+        <div class="dropdown">
+        <h1><a href="#">Пищевые ингредиенты</a></h1>
+                      <div class="dropdown-child">
+    <a href="#">Красители<br>Гелевые</a>
+    <a href="#">Водорастворимые</a>
+    <a href="#">Жирорастворимые</a>
+    <a href="#">Цветочная пыльца</a>
+    <a href="#">Кандурин</a>
+    <a href="#">Фломастеры<br>для рисования</a>
+
+  </div>
+        </div>
+
+        <div class="dropdown">
+        <h1><a href="#">Посыпки и украшения</a></h1>
+                      <div class="dropdown-child">
+    <a href="#">Красители<br>Гелевые</a>
+    <a href="#">Водорастворимые</a>
+    <a href="#">Жирорастворимые</a>
+    <a href="#">Цветочная пыльца</a>
+    <a href="#">Кандурин</a>
+    <a href="#">Фломастеры<br>для рисования</a>
+
+  </div>
+        </div>
+
+    </div>
+
+
+
+ <div id="body_art">
+{% block title %}
+<div class="mid_le">
+    <ul id="slides">
+    <li class="slide showing">1 слайд</li>
+    <li class="slide">2 слайд</li>
+    <li class="slide">3 слайд</li>
+    </ul>
+    </div>
+     {% endblock %}
+
+
+    {% block content %}
+
+{% endblock %}
+
+
+</div>
+
+
+  <footer>
+      <div id="foot">
+                <div class="logo_foot">
+                    <img src="{% static "images/top_logo.png" %}" alt="корзина кондитера футер">
+      </div>
+          <div class="de_scr_com">
+              Информация<br>
+              --------------------------------<br>
+              --------------------------------<br>
+              --------------------------------<br>
+              --------------------------------<br>
+              --------------------------------
+          </div>
+
+          <div class="pay_car">
+              Оплата и Доставка<br>
+              --------------------------------<br>
+              --------------------------------<br>
+              --------------------------------<br>
+              --------------------------------<br>
+              --------------------------------
+          </div>
+
+          <div class="form_add">
+              <form action="">
+                  Оформить Заказ:
+                  <input type="text" value="Имя">
+                  <input type="text" value="Телефон"><br>
+
+              </form>
+          </div>
+
+      </div>
+  </footer>
+
+ <script>
+    var slides = document.querySelectorAll('#slides .slide');
+    var currentSlide = 0;
+    var slideInterval = setInterval(nextSlide,2000);
+
+    function nextSlide(){
+        slides[currentSlide].className = 'slide';
+        currentSlide = (currentSlide+1)%slides.length;
+        slides[currentSlide].className = 'slide showing';
+    }
+
+    function cart_add(num,select){
+    let sel_name = select
+    document.getElementById(select).hidden = true;
+    let	id_product = num;
+const request = new XMLHttpRequest();
+const url = "{% url 'cart_add' %}";
+const params = id_product;
+request.open("POST", url, true);
+request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+request.addEventListener("readystatechange", () => {
+    if(request.readyState === 4 && request.status === 200) {
+		console.log('H');
+    }
+});
+request.send(params);
+}
+ </script>
+ </body>
+</html>

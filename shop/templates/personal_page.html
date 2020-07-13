@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+{% if user.is_authenticated %}
+
+<div> <h3> Привет {{request.user}}! <br>
+    история заказов :
+
+</h3></div>
+
+{% else %}
+    <div> login </div>
+<form method="post" action="">
+    {% csrf_token %}
+    <input type="text" name="username">
+    <input type="password" name="password">
+    <input type="submit" name="login">
+</form>
+<div> регистрация <a href="{% url 'register' %}">click</a></div>
+    {% for x in messages %}
+     {{ x }}
+    {% endfor %}
+{% endif %}
+</body>
+</html>

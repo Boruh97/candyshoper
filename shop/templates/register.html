@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+ <head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="{% static "style.css" %}">
+ </head>
+ <body>
+
+<form method="post" action="">
+  <div class="register">
+    {% csrf_token %}
+    {{ form.username.label }}
+    {{ form.username}}
+    {{ form.password1.label }}
+    {{ form.password1 }}
+    {{ form.password2.label }}
+    {{ form.password2 }}
+    {{ form.email.label }}
+    {{ form.email }}
+  </div>
+    <input type="submit" name="Create User" value="зарегистрироваться">
+</form>
+ </body>
+</html>

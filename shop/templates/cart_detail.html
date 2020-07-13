@@ -1,0 +1,16 @@
+{% load cart_tag %}
+
+Товаров: {{request.session.cart|length}}
+<br>
+
+
+{% for key,value in request.session.cart.items %}
+<br>{{value.name}}<br>
+Цена: {{value.price}} рублей<br>
+Количество: {{value.quantity}}<br>
+Всего к оплате: {% widthratio value.price 1 value.quantity %} <br>
+<img src="{{value.image }}" alt="" width="150">
+<a href="{% url 'item_clear' value.product_id %}">Удалить</a>
+<a href=""> Заказать!</a>
+
+{% endfor %}

@@ -1,0 +1,5 @@
+C:\Users\Gigabyte\refshop\myvenv\scripts
+
+cake1 = Cake.objects.create(title='Пример',price='500р',body='Размеры коробки 42*23*32*23')
+item6.image = ImageFile(open("images.jpg", "rb"))
+item6.save()

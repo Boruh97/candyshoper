@@ -1,0 +1,46 @@
+{% extends 'base_shop.html' %}
+
+{% block title %}
+
+    <div> </div>
+{% endblock %}
+
+    {% block content %}
+          <div id="Pre_view">
+          <div class="container_cake">
+                {% for x in date %}
+    <div class="cake_items">
+        {% if x.image %}
+        <div class="items_images">
+    <img src="{{ x.image.url }}">
+        </div>
+
+        {% endif %}
+        <div class="title">
+            {{ x.title }}
+        </div>
+        <div class="price">
+            {{ x.price }}
+        </div>
+        <div class="body">
+            {{ x.body }}
+        </div>
+        <div class="but">
+        <form action="{% url 'bases_des' %}">
+            <button type="submit" name="id" value="{{ x.parent }};{{ x.id }}">Описание</button>
+        </form>
+            {% if user.is_authenticated %}
+
+            <form action="{% url 'cart_add' %}">
+                <button type="submit" name="add_cart" value="{{ x.id }}">Добавить в <br> корзину</button>
+                <input type="number" name="count" min="1" max="999" value="1">
+            </form>
+
+             {% endif %}
+
+        </div>
+         </div>
+        {% endfor %}
+ </div>
+     </div>
+{% endblock %}

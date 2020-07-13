@@ -1,0 +1,538 @@
+#strait_as_arrow {
+    display: flex;
+    justify-content: flex-end;
+    height: 45px;
+    background: #FFF0F5;
+}
+
+#strait_as_arrow h3 {
+    margin: 10px;
+}
+
+#p_line {
+    height: 3px;
+    background: #800080;
+}
+
+header{
+    margin-top: 0px;
+    height: 140px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    margin-top: 2px;
+}
+
+.header-menu{
+    align-self: center;
+    display: flex;
+    align-items: stretch;
+	list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.header-menu li{
+    align-self: center;
+    cursor: pointer;
+    border-left: 2px solid #fff;
+    margin: 0;
+}
+
+.header-menu a{
+	text-decoration: none;
+	padding: 0 3px;
+	color: black;
+    line-height: 0px;
+    font-size: 19px;
+}
+
+.personal a{
+    color: red;
+    font-style: oblique;
+    font-size: 25px;
+}
+
+.search{
+    margin-top: 45px;
+}
+
+
+.header-menu li:hover{
+    background-color:rgba(255,182,193,0.2);
+}
+
+.social_menu {
+    margin-top: 15px;
+    margin-right: 30px;
+}
+
+.social_menu a {
+    margin: 10px;
+}
+
+.cart {
+    margin-left: 130px;
+    margin-top: -55px;
+}
+
+.black_line {
+    margin-top: -50px;
+    margin-left: 155px;
+    margin-right: 40px;
+    height: 3px;
+    background: black;
+}
+
+
+.catalog{
+    display: -webkit-flex;
+    -webkit-flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0px;
+}
+.catalog a{
+    color: black;
+    font-size: 18px;
+    margin: 3px;
+    text-decoration: none;
+}
+
+.all_drop {
+    margin-left: 50px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-child {
+    z-index: 1000;
+    position: absolute;
+    display: none;
+    background-color: white;
+    width: 150px;
+}
+.dropdown-child a {
+    margin: 4px;
+    color: black;
+    padding: 1px;
+    text-decoration: none;
+    display: block;
+    font-size: 18px;
+}
+.dropdown-child a:hover {
+    color: red;
+}
+.dropdown:hover .dropdown-child {
+    display: block;
+}
+
+/*
+essential styles:
+these make the slideshow work
+*/
+
+#body_art{
+
+}
+
+
+.slides_on_top{
+    display: flex;
+    justify-content: center;
+}
+
+
+.slide_one {
+    margin-left: 0px;
+    padding: 10px;
+}
+
+.slide_second {
+    padding: 10px;
+}
+
+.slide_three {
+    padding: 10px;
+}
+
+#slites{
+    position: relative;
+    height: 370px;
+    width: 350px;
+    padding: 0px;
+    list-style-type: none;
+}
+
+.slite{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 1;
+
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
+}
+
+.showin{
+    opacity: 1;
+    z-index: 2;
+}
+
+
+
+/*
+non-essential styles:
+just for appearance; change whatever you want
+*/
+
+.slite{
+    font-size: 40px;
+    padding: 40px;
+    box-sizing: border-box;
+    background: #333;
+    color: #fff;
+}
+
+.slite:nth-of-type(1){
+    background: #f6d654 url(images/slide/1.png)
+}
+.slite:nth-of-type(2){
+    background: #f6d654 url(images/slide/2.png)
+}
+.slite:nth-of-type(3){
+    background: #f6d654 url(images/slide/3.png)
+}
+
+
+#slotes{
+    position: relative;
+    height: 370px;
+    width: 350px;
+    padding: 0px;
+    list-style-type: none;
+}
+
+.slote{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 1;
+
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
+}
+
+.shawin{
+    opacity: 1;
+    z-index: 2;
+}
+
+
+
+/*
+non-essential styles:
+just for appearance; change whatever you want
+*/
+
+.slote{
+    font-size: 40px;
+    padding: 40px;
+    box-sizing: border-box;
+    background: #333;
+    color: #fff;
+}
+
+.slote:nth-of-type(1){
+    background: #f6d654 url(images/slide/1.png)
+}
+.slote:nth-of-type(2){
+    background: #f6d654 url(images/slide/2.png)
+}
+.slote:nth-of-type(3){
+    background: #f6d654 url(images/slide/3.png)
+}
+
+#slodes{
+    position: relative;
+    height: 370px;
+    width: 350px;
+    padding: 0px;
+    list-style-type: none;
+}
+
+.slode{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 1;
+
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
+}
+
+.shavin{
+    opacity: 1;
+    z-index: 2;
+}
+
+
+
+/*
+non-essential styles:
+just for appearance; change whatever you want
+*/
+
+.slode{
+    font-size: 40px;
+    padding: 40px;
+    box-sizing: border-box;
+    background: #333;
+    color: #fff;
+}
+
+.slode:nth-of-type(1){
+    background: #f6d654 url(images/slide/1.png)
+}
+.slode:nth-of-type(2){
+    background: #f6d654 url(images/slide/2.png)
+}
+.slode:nth-of-type(3){
+    background: #f6d654 url(images/slide/3.png)
+}
+
+
+.mid_le{
+    display: flex;
+    justify-content: center;
+    height: 350px;
+    margin-top: 0px;
+}
+
+#slides{
+    position: relative;
+    height: 300px;
+    width: 1000px;
+    padding: 0px;
+    list-style-type: none;
+}
+
+.slide{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 1;
+
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
+}
+
+.showing{
+    opacity: 1;
+    z-index: 2;
+}
+
+
+
+/*
+non-essential styles:
+just for appearance; change whatever you want
+*/
+
+.slide{
+    font-size: 40px;
+    padding: 40px;
+    box-sizing: border-box;
+    background: #333;
+    color: #fff;
+}
+
+.slide:nth-of-type(1){
+    background: #f6d654 url(images/slide/mid_1.jpg)
+}
+.slide:nth-of-type(2){
+    background: #f6d654 url(images/slide/mid_2.jpg)
+}
+.slide:nth-of-type(3){
+    background: #f6d654 url(images/slide/mid_3.jpg)
+}
+
+.container_cake {
+    padding-left: 20px;
+    padding-right: 20px;
+    display: -webkit-flex;
+    -webkit-flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.cake_items {
+    margin: 10px;
+}
+
+.title {
+    background:white;
+    font-size: 25px;
+}
+
+.price {
+    background:white;
+}
+
+.body {
+    background:white;
+}
+
+
+.cake_items img{
+    width: 165px;
+    height: 175px;
+}
+
+#wrap_form{
+    display: flex;
+    justify-content: center;
+
+}
+
+.form_wrap{
+    background:white;
+    display: flex;
+    width: 500px;
+    height: 200px;
+    justify-content: center;
+}
+
+.forma{
+    background: #FFB6C1;
+    margin: 5px;
+}
+
+footer{
+    margin-top: 60px;
+    height:250px;
+    display: flex;
+    justify-content: flex-space-around;
+    background: red;
+}
+
+.info {
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-size: 17px;
+    font-style: oblique;
+}
+
+.top_info {
+    display: flex;
+}
+
+.top_info form {
+    margin-left: 120px;
+}
+
+.top_info h3 {
+    padding-right: 50px;
+}
+
+.top_info p{
+    padding-left: 100px;
+}
+
+
+.bot_info {
+    display: flex;
+    margin-top: -30px;
+}
+
+.bot_info h3{
+    padding-left: 80px;
+    font-size: 20px;
+}
+
+.bot_info h4{
+    margin-top: 34px;
+    padding-left: 55px;
+    font-size: 20px;
+}
+
+.bot_info h5{
+    padding-left: 3px;
+    font-size: 20px;
+}
+
+
+.logo_foot {
+    margin-top: 20px;
+    width: 200px;
+    height: 150px;
+}
+
+.form_foot {
+    font-style: normal;
+    width: 150px;
+}
+
+
+.de_scr_com{
+    margin-top: 30px;
+    width: 217px;
+    height: 200px;
+    font-size: 20px;
+    margin-left:20px;
+    background: white;
+    border-radius: 100%;
+}
+.pay_car{
+    margin-top: 30px;
+    width: 217px;
+    height: 170px;
+    font-size: 20px;
+    margin-left:20px;
+    background: white;
+    border-radius: 100%;
+}
+.form_add{
+    margin-top: 30px;
+    border-radius: 50%;
+    width: 250px;
+    height: 200px;
+    font-size: 20px;
+    margin-left:20px;
+}
+
+.register {
+    display: flex;
+    flex-direction: column;
+}
+
+.register input{
+    width: 250px;
+}
